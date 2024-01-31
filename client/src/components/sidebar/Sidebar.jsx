@@ -10,11 +10,11 @@ export default function Sidebar() {
   const { user, dispatch } = useContext(Context);
 
 
-  const PF = "http://localhost:5000/images/"
+  const PF = "https://blogapi.cudigiclass.in/images/"
 
   useEffect(() => {
     const getCats = async () => {
-      const res = await axios.get("/categories");
+      const res = await axios.get("https://blogapi.cudigiclass.in/api/categories");
       setCats(res.data);
     };
     getCats();
