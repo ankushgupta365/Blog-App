@@ -7,9 +7,31 @@
     font-weight: 600;
     text-align: center;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.text-wrapper{
+    width: 600px;
+    height: 360px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 4px;
+    background-color:rgb(218, 62, 93);
+    padding: 40px 50px;
+}
+.text-heading{
+    font-size: 40px;
+    margin: 20px;
+    font-weight:bolder;
+}
+.text-para{
+    font-size: 18px;
+    padding: 10px;
 }
 .contact-wrapper {
-    width: 1100px;
+    width: 700px;
     margin: 0 auto;
 }
 .contact-wrapper h1 {

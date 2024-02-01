@@ -8,27 +8,14 @@ import { Carousel } from 'react-responsive-carousel';
 export default function Header() {
   return (
     <div className="header">
-      <div className="headerTitles">
-        <span className="headerTitleSm">Online Education Informational Journal</span>
-      </div>
-      <Carousel showIndicators={true} showThumbs={false} showArrows={true} showStatus={false} autoPlay={true}
-      infiniteLoop={true}>
+      {/* <Carousel showIndicators={true} showThumbs={false} showArrows={true} showStatus={false} autoPlay={true}
+      infiniteLoop={true}> */}
         <img
           className="headerImg"
           src={BG}
           alt=""
         />
-        <img
-          className="headerImg"
-          src={BG2}
-          alt=""
-        />
-        <img
-          className="headerImg"
-          src={BG3}
-          alt=""
-        />
-      </Carousel>
+      {/* </Carousel> */}
 
     </div>
   );

@@ -13,6 +13,7 @@ export default function TopBar() {
     dispatch({ type: "LOGOUT" });
   };
   return (
+    <div>
     <div className="top">
       <div className="topLeft">
         <img src={Logo} alt="logo" className="logo" />
@@ -75,6 +76,10 @@ export default function TopBar() {
           </ul>
         )}
         <i className="topSearchIcon fas fa-search"></i>
+      </div>
+    </div>
+    <div className="headerTitles">
+        <span className="headerTitleSm">Online Education Informational Journal</span>
       </div>
     </div>
   );

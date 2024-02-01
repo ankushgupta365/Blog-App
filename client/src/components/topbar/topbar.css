@@ -63,3 +63,13 @@
   cursor: pointer;
   margin-left: 15px;
 }
+
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+  color: #444;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
