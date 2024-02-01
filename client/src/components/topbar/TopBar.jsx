@@ -32,7 +32,7 @@ export default function TopBar() {
           {user ?
             <li className="topListItem">
               <Link className="link" to="/questions">
-                Question
+                Questions
               </Link>
             </li>
             :
