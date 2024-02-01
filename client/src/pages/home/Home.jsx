@@ -5,6 +5,8 @@ import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
 import axios from "axios";
 import { useLocation } from "react-router";
+import { publicRequest } from "../../requestMethods";
+
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -12,7 +14,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("https://blogapi.cudigiclass.in/api/posts" + search);
+      const res = await publicRequest.get("/posts" + search);
       setPosts(res.data);
     };
     fetchPosts();

@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 import Avatar from '../../assets/avatar.png';
+import { publicRequest } from "../../requestMethods";
 
 export default function Settings() {
   const { user, dispatch } = useContext(Context);
@@ -31,13 +32,13 @@ export default function Settings() {
       data.append("file", file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post("https://blogapi.cudigiclass.in/api/upload", data);
+        await publicRequest.post("/upload", data);
       } catch (err) {
         console.log(err);
       }
     }
     try {
-      const res = await axios.put("https://blogapi.cudigiclass.in/api/users/" + user._id, updatedUser);
+      const res = await publicRequest.put("/users/" + user._id, updatedUser);
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {

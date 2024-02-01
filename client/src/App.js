@@ -8,6 +8,9 @@ import Register from "./pages/register/Register";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "./context/Context";
+import Contact from "./pages/contact/Contact";
+import Research from "./pages/research/Research";
+import Questions from "./pages/questions/Questions";
 
 function App() {
   const { user } = useContext(Context);
@@ -20,10 +23,17 @@ function App() {
         </Route>
         <Route path="/register">{user ? <Home /> : <Register />}</Route>
         <Route path="/login">{user ? <Home /> : <Login />}</Route>
-        <Route path="/write">{user ? <Write /> : <Register />}</Route>
-        <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
+        <Route path="/write">{user ? <Write /> : <Login />}</Route>
+        <Route path="/settings">{user ? <Settings /> : <Login />}</Route>
+        <Route path="/questions">{user ? <Questions /> : <Login />}</Route>
         <Route path="/post/:postId">
           <Single />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/research">
+          <Research />
         </Route>
       </Switch>
     </Router>

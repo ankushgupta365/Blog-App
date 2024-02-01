@@ -1,5 +1,9 @@
 import "./header.css";
 import BG from '../../assets/bg.jpg';
+import BG2 from '../../assets/carousel-2.png';
+import BG3 from '../../assets/carousel-3.png';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 export default function Header() {
   return (
@@ -7,11 +11,25 @@ export default function Header() {
       <div className="headerTitles">
         <span className="headerTitleSm">Online Education Informational Journal</span>
       </div>
-      <img
-        className="headerImg"
-        src={BG}
-        alt=""
-      />
+      <Carousel showIndicators={true} showThumbs={false} showArrows={true} showStatus={false} autoPlay={true}
+      infiniteLoop={true}>
+        <img
+          className="headerImg"
+          src={BG}
+          alt=""
+        />
+        <img
+          className="headerImg"
+          src={BG2}
+          alt=""
+        />
+        <img
+          className="headerImg"
+          src={BG3}
+          alt=""
+        />
+      </Carousel>
+
     </div>
   );
 }

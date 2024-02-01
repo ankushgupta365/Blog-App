@@ -1,0 +1,20 @@
+.research {
+    width: 100%;
+    padding: 3rem 0;
+}
+.research-wrapper {
+    width: 1100px;
+    margin: 0 auto;
+}
+.posts-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.post-wrapper {
+    display: flex;
+    justify-content: center;
+}
+.post-wrapper .postImg {
+    height: 220px;
+}

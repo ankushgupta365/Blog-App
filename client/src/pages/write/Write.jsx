@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import "./write.css";
 import axios from "axios";
 import { Context } from "../../context/Context";
+import { publicRequest } from "../../requestMethods";
 
 export default function Write() {
   const [title, setTitle] = useState("");
@@ -23,11 +24,11 @@ export default function Write() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("https://blogapi.cudigiclass.in/api/upload", data);
+        await publicRequest.post("/upload", data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post("https://blogapi.cudigiclass.in/api/posts", newPost);
+      const res = await publicRequest.post("/posts", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) {}
   };
@@ -55,6 +56,9 @@ export default function Write() {
             onChange={e=>setTitle(e.target.value)}
           />
         </div>
+        {/* <div className="writeFromGroup">
+          npm install ng-multiselect-dropdown
+        </div> */}
         <div className="writeFormGroup">
           <p className="recommend">*Recommended Size For Picture Is 1200 * 400</p>
         </div>

@@ -24,6 +24,29 @@ export default function TopBar() {
               HOME
             </Link>
           </li>
+          <li className="topListItem">
+            <a className="link" target="_blank" href="https://noteachingjustlearning.blogspot.com/">
+              Blog
+            </a>
+          </li>
+          {user ?
+            <li className="topListItem">
+              <Link className="link" to="/questions">
+                Question
+              </Link>
+            </li>
+            :
+            <li className="topListItem">
+            <Link className="link" to="/contact">
+              Have Question?
+            </Link>
+          </li>
+          }
+          <li className="topListItem">
+            <Link className="link" to="/research">
+              Research
+            </Link>
+          </li>
           {user &&
             <li className="topListItem">
               <Link className="link" to="/write">

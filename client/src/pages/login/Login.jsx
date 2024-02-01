@@ -3,6 +3,7 @@ import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";
 import "./login.css";
 import Swal from 'sweetalert2';
+import { publicRequest } from "../../requestMethods";
 
 export default function Login() {
   const userRef = useRef();
@@ -13,7 +14,7 @@ export default function Login() {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post("https://blogapi.cudigiclass.in/api/auth/login", {
+      const res = await publicRequest.post("/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value,
       });

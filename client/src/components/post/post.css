@@ -1,14 +1,22 @@
 .post {
   width: 385px;
   margin: 0px 25px 40px 25px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.post:hover {
+  transform:translateY(-5px);
 }
 
 .postImg {
   width: 100%;
-  height: 280px;
-  object-fit: contain;
   border-radius: 7px;
   margin-bottom: 15px;
+  border-radius: 4px 4px 0 0;
 }
 
 .postInfo {
@@ -33,6 +41,8 @@
   font-weight: 700;
   margin-top: 15px;
   cursor: pointer;
+  text-align: center;
+  padding: 0 10px;
 }
 
 .postDate {
@@ -41,6 +51,7 @@
   font-size: 13px;
   color: #999;
   margin-top: 15px;
+  padding: 0 10px;
 }
 
 .postDesc {
@@ -55,4 +66,5 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+  padding: 0 10px;
 }
