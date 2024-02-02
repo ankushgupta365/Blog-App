@@ -1,5 +1,5 @@
 const { SESClient, SendTemplatedEmailCommand } = require('@aws-sdk/client-ses');
-
+require('dotenv').config()
 
 const SES_CONFIG = {
     credentials: {
