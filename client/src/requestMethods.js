@@ -5,5 +5,5 @@ const PRODUCTION_URL = "https://blogapi.cudigiclass.in/api"
 
 
 export const publicRequest = axios.create({
-    baseURL: PRODUCTION_URL
+    baseURL: BASE_URL
 })
