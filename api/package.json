@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@aws-sdk/client-ses": "^3.504.0",
+    "@sendgrid/mail": "^8.1.0",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^9.0.2",

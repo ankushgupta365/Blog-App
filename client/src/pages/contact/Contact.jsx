@@ -19,6 +19,9 @@ const Contact = () => {
         title: "Submitted Successfully",
         text: "Author will respond you soon",
       });
+      setName("")
+      setEmail("")
+      setQuery("")
     } catch (err) {
       Swal.fire({
         icon: "error",

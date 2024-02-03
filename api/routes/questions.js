@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Questions = require("../models/Questions");
-const { sendTemplatedEmailSESSingle } = require("./emailSES");
+const sendEmail = require("./emailSendgrid");
 
 
 //post question
@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
         email: req.body.email,
         query: req.body.query
     }
-    await sendTemplatedEmailSESSingle('ankushgupta0365@gmail.com', 'blog-app-ed-sir-query-template', dynamicTemplateData)
+    await sendEmail('ankushgupta0365@gmail.com', "New question on your blog","d-bc6cd961686a4562b5b968aeb0bbb518", dynamicTemplateData)
     res.status(200).json(savedQuestion);
   } catch (err) {
     res.status(500).json(err.message);
